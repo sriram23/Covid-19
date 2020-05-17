@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <v-tabs vertical class="navbar-style" height="100vh" color="#0089f4" background-color="#00589d55">
+            <v-tabs :vertical="window_width > 768 ? true : false" class="navbar-style" :height="`window_width > 768 ? '100vh' : none`" :width="`window_width > 768 ? none : '100vw'`" color="#00589d" background-color="#00589d55">
                 <v-tab to="/global" class="tab-style" active-class="active-class">
                     Global
                 </v-tab>
@@ -22,6 +22,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            window_width: window.innerWidth,
+        };
+    },
 }
 </script>
 
@@ -32,6 +37,15 @@ export default {
         height: 100vh;
         margin: unset;
         padding: unset;
+    }
+    @media (max-width: 768px) {
+        .navbar-style {
+            position: fixed;
+            bottom: 0 !important;
+            width: 100vw;
+            z-index: 1;
+            height: auto;
+        }
     }
     .tab-style {
         font-size: 12px;

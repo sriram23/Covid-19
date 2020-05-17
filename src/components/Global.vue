@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1 class="header">Global</h1>
-    <v-text-field class="header" placeholder="E.g: India" solo prepend-inner-icon="search" append-icon="forward" label="Search" @input="bindText" @click:append="search"></v-text-field>
-    <div v-if="globalData.data.data && globalData.data.data.length>0">
     <div v-if="isLoading" class="main-container row-flex">
         <v-progress-circular
         indeterminate
         color="#00589d"
         ></v-progress-circular>
     </div>
+    <h1 class="header">Global</h1>
+    <v-text-field class="header" placeholder="E.g: India" solo prepend-inner-icon="search" append-icon="forward" label="Search" @input="bindText" @click:append="search"></v-text-field>
+    <div v-if="globalData.data.data && globalData.data.data.length>0">
     <div class="main-container" v-for="data in globalData.data.data" :key="data">
         <div class="main-card">
             <div class="flag-container">
@@ -58,6 +58,7 @@ export default {
       };
   },
   created() {
+      this.isLoading = true;
       this.getData();
       this.isLoading = false;
   },

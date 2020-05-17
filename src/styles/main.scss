@@ -20,6 +20,15 @@
     position: sticky;
     top: 0;
 }
+@media (max-width: 768px) {
+    .main-container {
+        margin: unset;
+        margin-bottom: 20px;
+    }
+    .header {
+        margin: unset;
+    }
+}
 .card {
     box-shadow: 1px 5px 5px 2px #777;
     border: 1px solid #000000;

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from '@/plugins/vuetify' // path to vuetify export
 import Router from 'vue-router'
-import NavBar from '@/components/NavBar.vue'
+// import NavBar from '@/components/NavBar.vue'
 import Global from '@/components/Global.vue'
 import India from '@/components/India.vue'
 import GlobalTrend from '@/components/GlobalTrend.vue'
@@ -15,7 +15,7 @@ const routes = [
     {
       path: '/',
       name: 'navbar',
-      component: NavBar,
+      component: Global,
     },
     {
       path: '/global',
