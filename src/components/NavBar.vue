@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <v-tabs :vertical="window_width > 768 ? true : false" class="navbar-style" :height="`window_width > 768 ? '100vh' : none`" :width="`window_width > 768 ? none : '100vw'`" color="#00589d" background-color="#00589d55">
+            <v-tabs :vertical="window_width > 768 ? true : false" class="navbar-style" :height="`window_width > 768 ? '100vh' : none`" :width="`window_width > 768 ? none : '100vw'`" background-color="#00589d">
                 <v-tab to="/global" class="tab-style" active-class="active-class">
                     Global
                 </v-tab>
@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
+<style>
     .navbar-style {
         position: fixed;
         width: auto;
@@ -41,10 +41,10 @@ export default {
     @media (max-width: 768px) {
         .navbar-style {
             position: fixed;
-            bottom: 0 !important;
+            bottom: 20px !important;
             width: 100vw;
             z-index: 1;
-            height: auto;
+            height: 20px;
         }
     }
     .tab-style {
@@ -52,18 +52,12 @@ export default {
         text-align: left;
     }
     .active-class { 
-        color: #0089f4;
+        color: #FFFFFF !important;
         box-shadow: 1px 5px 5px 2px #777;
-        background: #0089f422;
+        /* background: #0089f422; */
     }
-    @media screen and (max-width: 600px) {
-      .navbar-style{
-        position: fixed;
-        width: 100vw;
-        // height: 100vh;
-        margin: unset;
-        padding: unset;
-        bottom: 0;
-      }  
+    
+    .v-slide-group__prev {
+        display: none !important;
     }
 </style>

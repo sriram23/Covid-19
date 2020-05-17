@@ -1,5 +1,5 @@
 .main-container {
-    margin-left: 155px;
+    margin-left: 145px;
     padding: 15px 45px;
     background: #00589d33;
     height: 100%;
@@ -14,7 +14,7 @@
 .header {
     box-shadow: 1px 5px 5px 2px #777;
     background: #00589d;
-    margin-left: 155px;
+    margin-left: 144px;
     padding: 25px;
     color: #FFFFFF;
     position: sticky;
@@ -36,7 +36,7 @@
     width: 200px;
     padding: 10px;
     margin: 10px;
-    background: #00589d;
+    background: linear-gradient(90deg,#00589d,#00589d66,#00589d33);
     .card-title {
         font-size: 18px;
         font-weight: 600;
@@ -49,7 +49,7 @@
     }
     .card-current {
         font-size: 12px;
-        color: #FFFF00;
+        color: #DDDDDD;
         margin-left: 5px;
     }
 }
@@ -73,7 +73,15 @@
 .red-text {
     color: #FF0000 !important;
 }
-
-@media screen and (max-width: 600px) {
-    
+@media (max-width: 768px) {
+    .main-container {
+        margin: unset;
+        margin-bottom: 20px;
+    }
+    .header {
+        margin: unset;
+    }
+    .row-flex {
+        flex-direction: column;
+    }
 }
