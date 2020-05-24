@@ -33,7 +33,7 @@ export default {
 <style>
     .navbar-style {
         position: fixed;
-        width: auto;
+        width: 165px !important;
         height: 100vh;
         margin: unset;
         padding: unset;
@@ -42,7 +42,7 @@ export default {
         .navbar-style {
             position: fixed;
             bottom: 20px !important;
-            width: 100vw;
+            width: 100vw !important;
             z-index: 1;
             height: 20px;
         }

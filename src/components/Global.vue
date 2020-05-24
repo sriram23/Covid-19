@@ -78,15 +78,11 @@ export default {
         temp = this.globalData;
         temp = _.map(temp.data.data, (result) => {
             if(result.name.includes(this.searchText)){
-                console.log('result.country', result.name)
                 temp2.push(result);
-                console.log('TMPEPE: ', temp2, result.name);
             }
         });
         temp = _.without(temp2, undefined);
-        console.log('Temp: ', temp);
         this.globalData.data.data = temp;
-        console.log('Datta: ', this.globalData.data.data);
     }
   },
 };

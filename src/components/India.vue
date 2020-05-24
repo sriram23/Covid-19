@@ -60,11 +60,7 @@ export default {
   methods: {
     async getData() {
         await axios.get('https://api.rootnet.in/covid19-in/stats').then(response => (this.indiaData = response));
-        console.log('India Data: ', this.indiaData.data.data.regional);
     },
-    // getImg(code) {
-    //     return `https://www.countryflags.io/${code}/flat/64.png`
-    // },
     bindText(val) {
         this.searchText = val;
     },
@@ -74,15 +70,11 @@ export default {
         temp = this.indiaData;
         temp = _.map(temp.data.data.regional, (result) => {
             if(result.loc.includes(this.searchText)){
-                console.log('result.country', result.loc)
                 temp2.push(result);
-                console.log('TMPEPE: ', temp2, result.loc);
             }
         });
         temp = _.without(temp2, undefined);
-        console.log('Temp: ', temp);
         this.indiaData.data.data.regional = temp;
-        console.log('Datta: ', this.globalData.data.data.regional);
     }
   },
 };
