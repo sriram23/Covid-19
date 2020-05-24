@@ -46,6 +46,7 @@ export default {
         ],
       },
       options: {
+        responsive: false,
         scales: {
           yAxes: [
             {
@@ -71,10 +72,12 @@ export default {
 }
 @media (max-width: 768px) {
     .chart-style {
-        margin-left: unset;
+        overflow-x: auto;
+        overflow-y: false;
+        margin: unset;
         bottom: 30px;
-        width: 100vw;
-        height: 95vh;
+        width: 1200px !important;
+        // height: auto !important;
     }
 }
 </style>
